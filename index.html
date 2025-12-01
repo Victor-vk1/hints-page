@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hints Page</title>
+  <style>
+    body {
+      margin:0; padding:0;
+      background: url('https://images.unsplash.com/photo-1571019613575-2c1b22f5d5e7?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 { 
+      margin-top: 30px; 
+      font-size: 48px; 
+      text-shadow: 0 0 10px #00ffff; 
+    }
+    .hintBtn {
+      background: #1a1a2e;
+      border: none;
+      margin: 20px;
+      padding: 20px 40px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 28px;
+      transition: 0.3s;
+      display: inline-block;
+      color: #fff;
+    }
+    .hintBtn:hover { background: #0f3460; }
+    #hintDisplay {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #ff66ff;
+      min-height: 200px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      padding: 20px;
+      background: rgba(26,26,46,0.7);
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffff;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Hints</h1>
+
+<button class="hintBtn" onclick="showHint('characters')">Characters</button>
+<button class="hintBtn" onclick="showHint('elements')">Elements</button>
+<button class="hintBtn" onclick="showHint('currency')">Currency</button>
+<button class="hintBtn" onclick="showHint('stages')">Stages of Power</button>
+
+<div id="hintDisplay">Click a button to see hints!</div>
+
+<script>
+function showHint(category){
+  const display = document.getElementById('hintDisplay');
+  switch(category){
+    case 'characters':
+      display.innerHTML = `<b>Characters Explanation:</b><br><br>
+      Characters are the heroes, fighters, or units you control in the game. Each character has unique abilities, stats, and roles that affect gameplay.<br><br>
+      - Some characters excel in <b>attack</b>, dealing heavy damage.<br>
+      - Some are <b>defenders</b>, protecting allies and absorbing damage.<br>
+      - Others are <b>support or healers</b>, giving buffs or restoring health.<br><br>
+      Understanding characters helps you <b>choose the right strategy</b> for every situation.`;
+      break;
+    case 'elements':
+      display.innerHTML = `<b>Elements Explanation:</b><br><br>
+      Elements are different types of natural or magical forces characters can control. Each element has unique effects, strengths, and weaknesses.<br><br>
+      - <b>Fire (Pyro)</b>: Strong against ice, causes burning damage over time.<br>
+      - <b>Water (Hydro)</b>: Weakens fire, helps create elemental combos.<br>
+      - <b>Earth (Geo)</b>: Provides shields and defensive structures.<br>
+      - <b>Animo</b>: Custom element; manipulates life force or energy, creates buffs, or alters enemy states.<br>
+      - <b>Lightning (Electro)</b>: Fast, can cause chain reactions and status effects.<br>
+      - <b>Ice (Cryo)</b>: Can slow or freeze enemies, especially combined with water.<br><br>
+      Using the right element at the right time can <b>turn the tide of battle</b>.`;
+      break;
+    case 'currency':
+      display.innerHTML = `<b>Currency Explanation:</b><br><br>
+      Currency represents the resources used to buy items, upgrade abilities, or unlock powers.<br><br>
+      - <b>Coins</b>: Basic currency for minor items and consumables.<br>
+      - <b>Gems</b>: Rare, used for powerful items or special features.<br>
+      - <b>Soul Shards</b>: Enhance powers or unlock dark combos.<br>
+      - <b>Essence</b>: Upgrade spells, enhance skills, craft magical items.<br>
+      - <b>Aether</b>: Rare currency for high-level ascensions or reincarnations.<br>
+      - <b>Runes</b>: Cast spells, unlock abilities, empower artifacts.<br>
+      - <b>Tokens</b>: Collectible for events or special rewards.<br><br>
+      Mastering currency use enhances character growth and strategy.`;
+      break;
+    case 'stages':
+      display.innerHTML = `<b>Stages of Power Explanation:</b><br><br>
+      Stages of Power represent the growth, transformation, or evolution of a character's strength.<br><br>
+      - <b>Ascension (Level 20)</b>: Characters gain enhanced abilities and stats, unlocking new skills.<br>
+      - <b>Falling (Level 50)</b>: Characters become stronger and access <b>dark power combos</b>, increasing damage and versatility.<br>
+      - <b>Reincarnation (Level 100)</b>: Characters reach peak potential with full control of all abilities and maximum stats.<br><br>
+      Knowing when to ascend, harness falling powers, or reach reincarnation <b>drastically changes gameplay strategy</b>.`;
+      break;
+    default:
+      display.innerHTML = "Unknown category";
+  }
+}
+</script>
+
+</body>
+</html>
