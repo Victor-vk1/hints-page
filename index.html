@@ -54,6 +54,10 @@
 <button class="hintBtn" onclick="showHint('elements')">Elements</button>
 <button class="hintBtn" onclick="showHint('currency')">Currency</button>
 <button class="hintBtn" onclick="showHint('stages')">Stages of Power</button>
+<button class="hintBtn" onclick="showHint('events')">Events</button>
+<button class="hintBtn" onclick="showHint('username')">Username</button>
+<button class="hintBtn" onclick="showHint('library')">Library</button>
+<button class="hintBtn" onclick="showHint('admin')">Admin</button>
 
 <div id="hintDisplay">Click a button to see hints!</div>
 
@@ -61,6 +65,7 @@
 function showHint(category){
   const display = document.getElementById('hintDisplay');
   switch(category){
+
     case 'characters':
       display.innerHTML = `<b>Characters Explanation:</b><br><br>
       Characters are the heroes, fighters, or units you control in the game. Each character has unique abilities, stats, and roles that affect gameplay.<br><br>
@@ -69,37 +74,80 @@ function showHint(category){
       - Others are <b>support or healers</b>, giving buffs or restoring health.<br><br>
       Understanding characters helps you <b>choose the right strategy</b> for every situation.`;
       break;
+
     case 'elements':
       display.innerHTML = `<b>Elements Explanation:</b><br><br>
       Elements are different types of natural or magical forces characters can control. Each element has unique effects, strengths, and weaknesses.<br><br>
       - <b>Fire (Pyro)</b>: Strong against ice, causes burning damage over time.<br>
       - <b>Water (Hydro)</b>: Weakens fire, helps create elemental combos.<br>
       - <b>Earth (Geo)</b>: Provides shields and defensive structures.<br>
-      - <b>Animo</b>: Custom element; manipulates life force or energy, creates buffs, or alters enemy states.<br>
-      - <b>Lightning (Electro)</b>: Fast, can cause chain reactions and status effects.<br>
-      - <b>Ice (Cryo)</b>: Can slow or freeze enemies, especially combined with water.<br><br>
-      Using the right element at the right time can <b>turn the tide of battle</b>.`;
+      - <b>Animo</b>: Custom element; manipulates life force or energy.<br>
+      - <b>Lightning (Electro)</b>: Fast, chain reactions.<br>
+      - <b>Ice (Cryo)</b>: Slows or freezes enemies.<br><br>
+      Using the right element at the right time can <b>change battle flow</b>.`;
       break;
+
     case 'currency':
       display.innerHTML = `<b>Currency Explanation:</b><br><br>
       Currency represents the resources used to buy items, upgrade abilities, or unlock powers.<br><br>
-      - <b>Coins</b>: Basic currency for minor items and consumables.<br>
-      - <b>Gems</b>: Rare, used for powerful items or special features.<br>
-      - <b>Soul Shards</b>: Enhance powers or unlock dark combos.<br>
-      - <b>Essence</b>: Upgrade spells, enhance skills, craft magical items.<br>
-      - <b>Aether</b>: Rare currency for high-level ascensions or reincarnations.<br>
-      - <b>Runes</b>: Cast spells, unlock abilities, empower artifacts.<br>
-      - <b>Tokens</b>: Collectible for events or special rewards.<br><br>
-      Mastering currency use enhances character growth and strategy.`;
+      - <b>Coins</b>: Basic items.<br>
+      - <b>Gems</b>: Rare upgrades.<br>
+      - <b>Soul Shards</b>: Dark combos.<br>
+      - <b>Essence</b>: Spell upgrades.<br>
+      - <b>Aether</b>: High ascensions.<br>
+      - <b>Runes</b>: Unlock abilities.<br>
+      - <b>Tokens</b>: Event rewards.<br><br>
+      Proper management is key to power growth.`;
       break;
+
     case 'stages':
       display.innerHTML = `<b>Stages of Power Explanation:</b><br><br>
-      Stages of Power represent the growth, transformation, or evolution of a character's strength.<br><br>
-      - <b>Ascension (Level 20)</b>: Characters gain enhanced abilities and stats, unlocking new skills.<br>
-      - <b>Falling (Level 50)</b>: Characters become stronger and access <b>dark power combos</b>, increasing damage and versatility.<br>
-      - <b>Reincarnation (Level 100)</b>: Characters reach peak potential with full control of all abilities and maximum stats.<br><br>
-      Knowing when to ascend, harness falling powers, or reach reincarnation <b>drastically changes gameplay strategy</b>.`;
+      Stages represent character growth and evolution.<br><br>
+      - <b>Ascension (Lv 20)</b>: Enhanced skills.<br>
+      - <b>Falling (Lv 50)</b>: Dark power combos.<br>
+      - <b>Reincarnation (Lv 100)</b>: Full potential unlocked.<br><br>
+      Choosing when to ascend or fall matters a lot.`;
       break;
+
+    case 'events':
+      display.innerHTML = `<b>Events Explanation:</b><br><br>
+      Events are <b>special forums</b> that pop up once in a while. All events pages are <b>active and ongoing</b>.<br><br>
+      You probably <b>can't see the link</b> because you haven't tapped <b>Contact Admin</b> through email yet.<br><br>
+      Do that to check events and enter — they give <b>serious prizes</b> and help you <b>level up fast</b>.`;
+      break;
+
+    case 'username':
+      display.innerHTML = `<b>Username Explanation:</b><br><br>
+      Your <b>username is vital</b> in this site. It helps us <b>track whatever you are doing</b> and also track <b>time, location, and address</b> — all for strict security purposes.<br><br>
+      Concerning the game, your username helps us <b>store your data securely</b> so no errors ever occur.<br><br>
+      Always use the <b>same username</b> for everything you do here.<br><br>
+      You can use a different password if you want — that is fine.`;
+      break;
+
+    case 'library':
+      display.innerHTML = `<b>Library Explanation:</b><br><br>
+      The Library is a site for reading <b>info and history</b> about this site, the game, and other interesting things.<br><br>
+      It is <b>not boring</b> at all — it includes books based on this century, books of war, history of nations, and more.<br><br>
+      If you ever meet events that require exams, the Library will <b>definitely help</b> you.<br><br>
+      If the link doesn't show, it's because you haven't completed the <b>Library Registration Process</b>.<br><br>
+      To start registration, click the <b>Contact</b> button and preferably send an <b>email to your Admin</b>.`;
+      break;
+
+    case 'admin':
+      display.innerHTML = `<b>Admin Explanation:</b><br><br>
+      The Admin is the <b>Editor, Manager, and Director</b> of all accessible pages here.<br><br>
+      He watches everything you do through a <b>secure webview forum</b>, accessing files, modifying, changing, and editing any possible intel.<br><br>
+      He is also the <b>programmer</b> who codes the cookies and files you see.<br><br>
+      If you cannot see a link to enter a page, it's because the <b>AI hasn't verified you</b> as a complete user yet.<br><br>
+      Use the <b>Contact</b> link and preferably send a proper email to the admin for:<br>
+      - Verification processes<br>
+      - Registration<br>
+      - Any problems you face<br><br>
+      Always compose your email <b>properly</b> or it will not be answered.<br>
+      No foul or explicit words allowed — or you may be <b>banned</b> from contacting the admin.<br><br>
+      Be wise!`;
+      break;
+
     default:
       display.innerHTML = "Unknown category";
   }
@@ -108,3 +156,4 @@ function showHint(category){
 
 </body>
 </html>
+
